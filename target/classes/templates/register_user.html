@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MooGame</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Welcome! Please login</h1>
+		
+		<form action='#' th:action="@{/login}" method="post" th:object="${player}">
+			<label>Username:</label>
+			<input type="text" th:field="*{name}"/><br/>
+			
+			<button type="submit">Login</button>
+		</form>
+	</div>
+</body>
+</html>
